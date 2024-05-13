@@ -179,7 +179,7 @@
                 <img src="" id="current_image" style="max-height: 50px;" />
             </div>
     
-            <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
+            <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Update</button>
           </form>
       
       </div>
@@ -321,10 +321,11 @@
   }
   //=========== view details ========================
 
-function view_image(img_name){
-  $('#view_image').attr('src', '{{ asset('/assets/images') }}/' + img_name);
-  $('#imageViewModal').modal('show');
-}
+  function view_image(img_name){
+    $('#view_image').attr('src', '{{ asset('/assets/images') }}/' + img_name);
+    $('#imageViewModal').modal('show');
+  }
+
   function detailsedit(record_id) {
     $.ajax({
           url: "{{ route('viewTesterDetails') }}",
